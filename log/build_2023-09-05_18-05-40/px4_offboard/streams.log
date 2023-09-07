@@ -1,0 +1,26 @@
+[3.976s] Invoking command in '/home/omkar/ros2_px4_offboard_example_ws/src/ROS2_PX4_Offboard_Example/px4_offboard': CMAKE_PREFIX_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com LD_LIBRARY_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/lib:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard/prefix_override:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/px4_offboard build --build-base /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard/build install --record /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard/install.log --single-version-externally-managed
+[5.608s] running egg_info
+[5.614s] writing ../../../build/px4_offboard/px4_offboard.egg-info/PKG-INFO
+[5.616s] writing dependency_links to ../../../build/px4_offboard/px4_offboard.egg-info/dependency_links.txt
+[5.618s] writing entry points to ../../../build/px4_offboard/px4_offboard.egg-info/entry_points.txt
+[5.619s] writing requirements to ../../../build/px4_offboard/px4_offboard.egg-info/requires.txt
+[5.624s] writing top-level names to ../../../build/px4_offboard/px4_offboard.egg-info/top_level.txt
+[5.638s] reading manifest file '../../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'
+[5.640s] adding license file 'LICENSE'
+[5.652s] writing manifest file '../../../build/px4_offboard/px4_offboard.egg-info/SOURCES.txt'
+[5.653s] running build
+[5.654s] running build_py
+[5.660s] running install
+[5.663s] running install_lib
+[5.671s] running install_data
+[5.673s] running install_egg_info
+[5.690s] removing '/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info' (and everything under it)
+[5.699s] Copying ../../../build/px4_offboard/px4_offboard.egg-info to /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard/lib/python3.10/site-packages/px4_offboard-0.0.0-py3.10.egg-info
+[5.704s] running install_scripts
+[5.811s] Installing control script to /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard/lib/px4_offboard
+[5.812s] Installing offboard_control script to /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard/lib/px4_offboard
+[5.814s] Installing processes script to /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard/lib/px4_offboard
+[5.815s] Installing velocity_control script to /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard/lib/px4_offboard
+[5.816s] Installing visualizer script to /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard/lib/px4_offboard
+[5.818s] writing list of installed files to '/home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard/install.log'
+[5.948s] Invoked command in '/home/omkar/ros2_px4_offboard_example_ws/src/ROS2_PX4_Offboard_Example/px4_offboard' returned '0': CMAKE_PREFIX_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com LD_LIBRARY_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/lib:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard/prefix_override:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/px4_offboard build --build-base /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard/build install --record /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard/install.log --single-version-externally-managed

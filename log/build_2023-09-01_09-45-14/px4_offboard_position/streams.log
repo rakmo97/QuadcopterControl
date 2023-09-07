@@ -1,0 +1,35 @@
+[1.794s] Invoking command in '/home/omkar/ros2_px4_offboard_example_ws/src/px4_offboard_position': AMENT_PREFIX_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs LD_LIBRARY_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/prefix_override:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages:/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/px4_offboard_position build --build-base /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build install --record /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/install.log --single-version-externally-managed
+[2.556s] running egg_info
+[2.558s] creating ../../build/px4_offboard_position/px4_offboard_position.egg-info
+[2.559s] writing ../../build/px4_offboard_position/px4_offboard_position.egg-info/PKG-INFO
+[2.559s] writing dependency_links to ../../build/px4_offboard_position/px4_offboard_position.egg-info/dependency_links.txt
+[2.562s] writing entry points to ../../build/px4_offboard_position/px4_offboard_position.egg-info/entry_points.txt
+[2.563s] writing requirements to ../../build/px4_offboard_position/px4_offboard_position.egg-info/requires.txt
+[2.563s] writing top-level names to ../../build/px4_offboard_position/px4_offboard_position.egg-info/top_level.txt
+[2.563s] writing manifest file '../../build/px4_offboard_position/px4_offboard_position.egg-info/SOURCES.txt'
+[2.566s] reading manifest file '../../build/px4_offboard_position/px4_offboard_position.egg-info/SOURCES.txt'
+[2.567s] adding license file 'LICENSE'
+[2.570s] writing manifest file '../../build/px4_offboard_position/px4_offboard_position.egg-info/SOURCES.txt'
+[2.571s] running build
+[2.571s] running build_py
+[2.571s] creating /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build
+[2.571s] creating /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build/lib
+[2.572s] creating /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build/lib/px4_offboard_position
+[2.572s] copying px4_offboard_position/visualizer.py -> /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build/lib/px4_offboard_position
+[2.574s] copying px4_offboard_position/__init__.py -> /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build/lib/px4_offboard_position
+[2.575s] copying px4_offboard_position/offboard_control.py -> /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build/lib/px4_offboard_position
+[2.575s] running install
+[2.576s] running install_lib
+[2.576s] creating /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position
+[2.577s] copying /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build/lib/px4_offboard_position/visualizer.py -> /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position
+[2.578s] copying /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build/lib/px4_offboard_position/__init__.py -> /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position
+[2.579s] copying /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build/lib/px4_offboard_position/offboard_control.py -> /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position
+[2.583s] byte-compiling /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position/visualizer.py to visualizer.cpython-310.pyc
+[2.584s] byte-compiling /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position/__init__.py to __init__.cpython-310.pyc
+[2.585s] byte-compiling /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position/offboard_control.py to offboard_control.cpython-310.pyc
+[2.585s] running install_data
+[2.590s] creating /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/share/ament_index
+[2.591s] creating /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/share/ament_index/resource_index
+[2.591s] creating /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/share/ament_index/resource_index/packages
+[2.591s] error: can't copy 'resource/px4_offboard_position': doesn't exist or not a regular file
+[2.633s] Invoked command in '/home/omkar/ros2_px4_offboard_example_ws/src/px4_offboard_position' returned '1': AMENT_PREFIX_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs LD_LIBRARY_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/prefix_override:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages:/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/px4_offboard_position build --build-base /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build install --record /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/install.log --single-version-externally-managed

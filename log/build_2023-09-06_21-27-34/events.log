@@ -1,0 +1,72 @@
+[0.000000] (-) TimerEvent: {}
+[0.000858] (-) JobUnselected: {'identifier': 'px4_msgs'}
+[0.006709] (-) JobUnselected: {'identifier': 'px4_offboard'}
+[0.006910] (-) JobUnselected: {'identifier': 'px4_ros_com'}
+[0.007374] (px4_offboard_position) JobQueued: {'identifier': 'px4_offboard_position', 'dependencies': OrderedDict([('px4_msgs', '/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs')])}
+[0.007570] (px4_offboard_position) JobStarted: {'identifier': 'px4_offboard_position'}
+[0.097642] (-) TimerEvent: {}
+[0.201087] (-) TimerEvent: {}
+[0.308333] (-) TimerEvent: {}
+[0.409295] (-) TimerEvent: {}
+[0.514574] (-) TimerEvent: {}
+[0.618677] (-) TimerEvent: {}
+[0.720031] (-) TimerEvent: {}
+[0.821834] (-) TimerEvent: {}
+[0.922606] (-) TimerEvent: {}
+[1.023637] (-) TimerEvent: {}
+[1.126614] (-) TimerEvent: {}
+[1.227514] (-) TimerEvent: {}
+[1.333182] (-) TimerEvent: {}
+[1.434139] (-) TimerEvent: {}
+[1.536683] (-) TimerEvent: {}
+[1.637321] (-) TimerEvent: {}
+[1.738033] (-) TimerEvent: {}
+[1.839736] (-) TimerEvent: {}
+[1.940836] (-) TimerEvent: {}
+[2.041587] (-) TimerEvent: {}
+[2.142418] (-) TimerEvent: {}
+[2.243054] (-) TimerEvent: {}
+[2.343722] (-) TimerEvent: {}
+[2.444302] (-) TimerEvent: {}
+[2.545321] (-) TimerEvent: {}
+[2.605853] (px4_offboard_position) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/px4_offboard_position', 'build', '--build-base', '/home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build', 'install', '--record', '/home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/install.log', '--single-version-externally-managed'], 'cwd': '/home/omkar/ros2_px4_offboard_example_ws/src/px4_offboard_position', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'omkar', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/lib:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/omkar', 'OLDPWD': '/home/omkar', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3250', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/omkar/ros2_px4_offboard_example_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'omkar', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'omkar', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/opt/gcc-arm-none-eabi-9-2020-q2-update/bin:/home/omkar/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/omkar-VirtualBox:@/tmp/.ICE-unix/1423,unix/omkar-VirtualBox:/tmp/.ICE-unix/1423', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/cb1324b4_5a6f_4e8d_af3f_70226de3cb10', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.PP41A2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard:/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/prefix_override:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard/lib/python3.10/site-packages:/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com'}, 'shell': False}
+[2.650253] (-) TimerEvent: {}
+[2.753639] (-) TimerEvent: {}
+[2.854303] (-) TimerEvent: {}
+[2.954948] (-) TimerEvent: {}
+[3.056139] (-) TimerEvent: {}
+[3.157520] (-) TimerEvent: {}
+[3.262910] (-) TimerEvent: {}
+[3.363496] (-) TimerEvent: {}
+[3.467138] (-) TimerEvent: {}
+[3.510499] (px4_offboard_position) StdoutLine: {'line': b'running egg_info\n'}
+[3.512770] (px4_offboard_position) StdoutLine: {'line': b'writing ../../build/px4_offboard_position/px4_offboard_position.egg-info/PKG-INFO\n'}
+[3.513624] (px4_offboard_position) StdoutLine: {'line': b'writing dependency_links to ../../build/px4_offboard_position/px4_offboard_position.egg-info/dependency_links.txt\n'}
+[3.517238] (px4_offboard_position) StdoutLine: {'line': b'writing entry points to ../../build/px4_offboard_position/px4_offboard_position.egg-info/entry_points.txt\n'}
+[3.519880] (px4_offboard_position) StdoutLine: {'line': b'writing requirements to ../../build/px4_offboard_position/px4_offboard_position.egg-info/requires.txt\n'}
+[3.520826] (px4_offboard_position) StdoutLine: {'line': b'writing top-level names to ../../build/px4_offboard_position/px4_offboard_position.egg-info/top_level.txt\n'}
+[3.528908] (px4_offboard_position) StdoutLine: {'line': b"reading manifest file '../../build/px4_offboard_position/px4_offboard_position.egg-info/SOURCES.txt'\n"}
+[3.531856] (px4_offboard_position) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[3.535104] (px4_offboard_position) StdoutLine: {'line': b"writing manifest file '../../build/px4_offboard_position/px4_offboard_position.egg-info/SOURCES.txt'\n"}
+[3.540805] (px4_offboard_position) StdoutLine: {'line': b'running build\n'}
+[3.541216] (px4_offboard_position) StdoutLine: {'line': b'running build_py\n'}
+[3.542529] (px4_offboard_position) StdoutLine: {'line': b'copying px4_offboard_position/offboard_control.py -> /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build/lib/px4_offboard_position\n'}
+[3.545074] (px4_offboard_position) StdoutLine: {'line': b'running install\n'}
+[3.545939] (px4_offboard_position) StdoutLine: {'line': b'running install_lib\n'}
+[3.549724] (px4_offboard_position) StdoutLine: {'line': b'copying /home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/build/lib/px4_offboard_position/offboard_control.py -> /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position\n'}
+[3.554499] (px4_offboard_position) StdoutLine: {'line': b'byte-compiling /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position/offboard_control.py to offboard_control.cpython-310.pyc\n'}
+[3.565494] (px4_offboard_position) StdoutLine: {'line': b'running install_data\n'}
+[3.569498] (-) TimerEvent: {}
+[3.570492] (px4_offboard_position) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.577303] (px4_offboard_position) StdoutLine: {'line': b"removing '/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[3.590051] (px4_offboard_position) StdoutLine: {'line': b'Copying ../../build/px4_offboard_position/px4_offboard_position.egg-info to /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/python3.10/site-packages/px4_offboard_position-0.0.0-py3.10.egg-info\n'}
+[3.593270] (px4_offboard_position) StdoutLine: {'line': b'running install_scripts\n'}
+[3.669605] (-) TimerEvent: {}
+[3.704298] (px4_offboard_position) StdoutLine: {'line': b'Installing offboard_control script to /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/px4_offboard_position\n'}
+[3.707082] (px4_offboard_position) StdoutLine: {'line': b'Installing visualizer script to /home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position/lib/px4_offboard_position\n'}
+[3.709636] (px4_offboard_position) StdoutLine: {'line': b"writing list of installed files to '/home/omkar/ros2_px4_offboard_example_ws/build/px4_offboard_position/install.log'\n"}
+[3.785409] (-) TimerEvent: {}
+[3.818787] (px4_offboard_position) CommandEnded: {'returncode': 0}
+[3.893447] (-) TimerEvent: {}
+[3.924042] (px4_offboard_position) JobEnded: {'identifier': 'px4_offboard_position', 'rc': 0}
+[3.925523] (-) EventReactorShutdown: {}

@@ -1,0 +1,48 @@
+[0.065s] Invoking command in '/home/omkar/ros2_px4_offboard_example_ws/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard:/opt/ros/humble LD_LIBRARY_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/lib:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/omkar/ros2_px4_offboard_example_ws/build/px4_ros_com -- -j1 -l1
+[0.369s] [ 20%] Built target frame_transforms
+[0.482s] [ 40%] Built target sensor_combined_listener
+[0.603s] [ 60%] Built target vehicle_gps_position_listener
+[0.733s] [ 80%] Built target debug_vect_advertiser
+[0.850s] [100%] Built target offboard_control
+[0.900s] Invoked command in '/home/omkar/ros2_px4_offboard_example_ws/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard:/opt/ros/humble LD_LIBRARY_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/lib:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/omkar/ros2_px4_offboard_example_ws/build/px4_ros_com -- -j1 -l1
+[1.071s] Invoking command in '/home/omkar/ros2_px4_offboard_example_ws/build/px4_ros_com': CMAKE_PREFIX_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard:/opt/ros/humble LD_LIBRARY_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/lib:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/omkar/ros2_px4_offboard_example_ws/build/px4_ros_com
+[1.108s] -- Install configuration: ""
+[1.112s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib/px4_ros_com/sensor_combined_listener
+[1.117s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib/px4_ros_com/vehicle_gps_position_listener
+[1.120s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib/px4_ros_com/debug_vect_advertiser
+[1.124s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib/px4_ros_com/offboard_control
+[1.125s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.sh
+[1.126s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/environment/library_path.dsv
+[1.126s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/include/px4_ros_com
+[1.129s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/include/px4_ros_com/frame_transforms.h
+[1.132s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib/libframe_transforms.so
+[1.133s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com//launch
+[1.134s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com//launch/sensor_combined_listener.launch.py
+[1.135s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com//launch/offboard_control_launch.yaml
+[1.135s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com//test
+[1.136s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com//test/test_output.py
+[1.136s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com//test/__init__.py
+[1.136s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com//test/test_input.py
+[1.137s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com//test/pipeline_io_test.py
+[1.138s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/ament_index/resource_index/package_run_dependencies/px4_ros_com
+[1.138s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/ament_index/resource_index/parent_prefix_path/px4_ros_com
+[1.139s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.sh
+[1.140s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/environment/ament_prefix_path.dsv
+[1.140s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/environment/path.sh
+[1.144s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/environment/path.dsv
+[1.147s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/local_setup.bash
+[1.147s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/local_setup.sh
+[1.148s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/local_setup.zsh
+[1.150s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/local_setup.dsv
+[1.151s] -- Installing: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/package.dsv
+[1.154s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/ament_index/resource_index/packages/px4_ros_com
+[1.155s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport.cmake
+[1.156s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/cmake/export_frame_transformsExport-noconfig.cmake
+[1.156s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.156s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_targets-extras.cmake
+[1.156s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.158s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/cmake/ament_cmake_export_libraries-extras.cmake
+[1.159s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig.cmake
+[1.159s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/cmake/px4_ros_comConfig-version.cmake
+[1.159s] -- Up-to-date: /home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/share/px4_ros_com/package.xml
+[1.178s] Invoked command in '/home/omkar/ros2_px4_offboard_example_ws/build/px4_ros_com' returned '0': CMAKE_PREFIX_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard_position:/home/omkar/ros2_px4_offboard_example_ws/install/px4_offboard:/opt/ros/humble LD_LIBRARY_PATH=/home/omkar/ros2_px4_offboard_example_ws/install/px4_msgs/lib:/home/omkar/ros2_px4_offboard_example_ws/install/px4_ros_com/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/omkar/ros2_px4_offboard_example_ws/build/px4_ros_com
