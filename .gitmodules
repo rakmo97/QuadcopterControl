@@ -4,3 +4,6 @@
 [submodule "src/ROS2_PX4_Offboard_Example"]
 	path = src/ROS2_PX4_Offboard_Example
 	url = https://github.com/ARK-Electronics/ROS2_PX4_Offboard_Example.git
+[submodule "src/px4_ros_com"]
+	path = src/px4_ros_com
+	url = https://github.com/PX4/px4_ros_com.git
