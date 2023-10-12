@@ -108,6 +108,10 @@ class OffboardControl(Node):
         self.ref_lon = 0
         self.ref_alt = 0
 
+        self.SAFE_TO_FLY_FLAG = True
+        self.emergency_returned_home_success = False
+        self.convergence_counter = 0
+        
         # Net Parameters
         # [lat, lon] in degrees
         self.net_corners = np.array([[29.628399, -82.360596],  # top right
@@ -115,6 +119,9 @@ class OffboardControl(Node):
                                      [29.627893, -82.360081],  # bottom left
                                      [29.628035, -82.359972]]) # bottom right
         self.local_corners_set = False
+
+        # Methods to run in initialization
+        # self.get_local_net_corners_enu()
 
  
     def vehicle_status_callback(self, msg):
@@ -127,6 +134,10 @@ class OffboardControl(Node):
         # self.get_logger().info(" IN COMMAND LOOP!!!!")
         
 
+
+
+                  
+
         if self.offboard_setpoint_counter_ == 50:
             # Change to Offboard mode after 50 setpoints (1s)
             self.engage_offBoard_mode()
@@ -134,41 +145,62 @@ class OffboardControl(Node):
             # Get local-frame net corner values
             if not self.local_corners_set:
                 self.get_local_net_corners_enu()
-              
+
             # Arm the vehicle
             self.arm()
            
 
+        if self.SAFE_TO_FLY_FLAG:
+            # self.check_safety()
+
+            if self.offboard_setpoint_counter_ < 550:
+                # offboard_control_mode needs to be paired with trajectory_setpoint
+                print("start counter")
+                self.publish_offboard_control_mode_position()
+                if self.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
+                    self.publish_trajectory_setpoint_position(0.0, 0.0, -5.0, 0.0)
+                # self.offboard_setpoint_counter_ += 1
+
+            if self.offboard_setpoint_counter_ >= 550 and self.offboard_setpoint_counter_ < 1650:
+                # offboard_control_mode needs to be paired with trajectory_setpoint
+                print("start counter")
+                self.check_safety()
+
+                self.publish_offboard_control_mode_velocity()
+                self.dist_to_net()
+                if self.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
+                    self.publish_trajectory_setpoint_circle()
+                # self.offboard_setpoint_counter_ += 1
             
-        if self.offboard_setpoint_counter_ < 550:
-            # offboard_control_mode needs to be paired with trajectory_setpoint
-            print("start counter")
-            self.publish_offboard_control_mode_position()
-            if self.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
-                self.publish_trajectory_setpoint_position(0.0, 0.0, -5.0, -3.14)
-            self.offboard_setpoint_counter_ += 1
+            if self.offboard_setpoint_counter_ >= 1650 and self.offboard_setpoint_counter_ < 2250:
+                # offboard_control_mode needs to be paired with trajectory_setpoint
+                print("start counter")
+                self.check_safety()
 
-        if self.offboard_setpoint_counter_ >= 550 and self.offboard_setpoint_counter_ < 1650:
-            # offboard_control_mode needs to be paired with trajectory_setpoint
-            print("start counter")
-            self.publish_offboard_control_mode_velocity()
-            if self.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
-                self.publish_trajectory_setpoint_circle()
-            self.offboard_setpoint_counter_ += 1
-        
-        if self.offboard_setpoint_counter_ >= 1650 and self.offboard_setpoint_counter_ < 2250:
-            # offboard_control_mode needs to be paired with trajectory_setpoint
-            print("start counter")
-            self.publish_offboard_control_mode_position()
-            if self.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
-                self.publish_trajectory_setpoint_position(0.0, 0.0, -5.0, 0.0)
-            self.offboard_setpoint_counter_ += 1
+                self.publish_offboard_control_mode_position()
+                if self.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
+                    self.publish_trajectory_setpoint_position(0.0, 0.0, -5.0, 0.0)
+                # self.offboard_setpoint_counter_ += 1
 
-        if self.offboard_setpoint_counter_ == 2250:
-            # Land and cancel timer after (38s)
-            self.land()
-            self.timer.cancel()
+            if self.offboard_setpoint_counter_ == 2250:
+                # Land and cancel timer after (38s)
+                self.land()
+                self.timer.cancel()
 
+        elif not self.SAFE_TO_FLY_FLAG:
+            
+
+            if not self.emergency_returned_home_success:
+                self.return_home()
+
+            if self.emergency_returned_home_success:
+                self.get_logger().info('Returned Home, landing...')
+                self.land()
+                self.timer.cancel()
+
+
+        # self.get_logger().info('SAFE_TO_FLY_FLAGself.SAFE_TO_FLY)
+        self.offboard_setpoint_counter_ += 1
         self.record_state(self.data_filename)
     
 
@@ -255,7 +287,7 @@ class OffboardControl(Node):
         msg.acceleration[1] = float('nan')
         msg.acceleration[2] = float('nan')
         msg.yaw = float('nan')
-        msg.yawspeed = float('nan')
+        msg.yawspeed = self.omega
 
         # msg.velocity[0] = float('nan')
         # msg.velocity[1] = float('nan')
@@ -361,10 +393,10 @@ class OffboardControl(Node):
         d3 = np.linalg.norm(self.local_corner_enu[2,:] - self.local_corner_enu[3,:])
         d4 = np.linalg.norm(self.local_corner_enu[3,:] - self.local_corner_enu[1,:])
 
-        self.get_logger().info('d1: {} m'.format({d1}))
-        self.get_logger().info('d2: {} m'.format({d2}))
-        self.get_logger().info('d3: {} m'.format({d3}))
-        self.get_logger().info('d4: {} m'.format({d4}))
+        self.get_logger().info('d1: {} m'.format(d1))
+        self.get_logger().info('d2: {} m'.format(d2))
+        self.get_logger().info('d3: {} m'.format(d3))
+        self.get_logger().info('d4: {} m'.format(d4))
 
         self.build_netline_params()
 
@@ -377,17 +409,17 @@ class OffboardControl(Node):
 
         for i in range(num_sides):
             
-            x1 = np.local_corner_enu[i,0]
-            y1 = np.local_corner_enu[i,1]
+            x1 = self.local_corner_enu[i,0]
+            y1 = self.local_corner_enu[i,1]
         
 
             if i != (num_sides-1):
-                x2 = np.local_corner_enu[i+1,0]
-                y2 = np.local_corner_enu[i+1,1]
+                x2 = self.local_corner_enu[i+1,0]
+                y2 = self.local_corner_enu[i+1,1]
 
             else:
-                x2 = np.local_corner_enu[0,0]
-                y2 = np.local_corner_enu[0,1]
+                x2 = self.local_corner_enu[0,0]
+                y2 = self.local_corner_enu[0,1]
              
             a = y1 - y2
             b = x2 - x1
@@ -402,7 +434,61 @@ class OffboardControl(Node):
 
     def dist_to_net(self):
 
+        num_sides = 4
         
+        x = self.vehicle_local_position[0]
+        y = self.vehicle_local_position[1]
+    
+        distances = np.zeros((num_sides,))
+        
+        for i in range(num_sides):
+            
+            a = self.netline_params[i,0]
+            b = self.netline_params[i,1]
+            c = self.netline_params[i,2]
+
+            distances[i] = abs(a*x + b*y + c) / np.sqrt(a**2 + b**2)
+
+        self.distance_to_net = np.min(distances)
+
+        # self.get_logger().info('distance_to_net: {} m'.format(self.distance_to_net))
+            
+
+
+
+    def return_home(self):
+
+        # approaching_home = True
+        convergence_patience = 100
+        position_convergence_tolerance = 1.0
+
+
+        if not self.emergency_returned_home_success:
+            self.publish_offboard_control_mode_position()
+            if self.nav_state == VehicleStatus.NAVIGATION_STATE_OFFBOARD:
+                self.publish_trajectory_setpoint_position(0.0, 0.0, -5.0, 0.0)
+
+            x = self.vehicle_local_position[0]
+            y = self.vehicle_local_position[1]
+            z = self.vehicle_local_position[2]
+
+            distance_to_home = np.linalg.norm(np.array([x,y,z-5]))
+
+            if distance_to_home < position_convergence_tolerance:
+                self.convergence_counter += 1
+            else:
+                self.convergence_counter = 0
+            if self.convergence_counter >= convergence_patience:
+                self.emergency_returned_home_success = True
+
+    def check_safety(self):
+        self.dist_to_net()
+        distance_to_net_tolerance = 1.0
+
+        if self.distance_to_net < distance_to_net_tolerance:
+            self.get_logger().info('Too close to net! Returning home...')
+
+            self.SAFE_TO_FLY_FLAG = False
 
 
 
